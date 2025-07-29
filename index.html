@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Body Prime Suplementos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- 🔝 Cabeçalho fixo -->
+    <header id="topo">
+        <div class="top-bar">
+            <img src="imagens/logo.png" alt="Body Prime Suplementos" class="logo">
+
+            <nav class="menu">
+                <a href="#creatina">Creatina</a>
+                <a href="#pre-treino">Pré-treino</a>
+                <a href="#whey">Whey</a>
+                <a href="#termogenico">Termogênico</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- 👋 Saudação -->
+    <section class="saudacao">
+        <div class="texto">
+            <h1>Bem-vindo à Body Prime Suplementos</h1>
+            <p>Entregamos seu pedido em até <strong>30 minutos</strong> após o pagamento, direto para seu endereço!</p>
+            <div class="botoes">
+                <a href="https://wa.me/5584991926432" class="botao botao-insta">Suporte WhatsApp</a>
+                <a href="https://instagram.com/body_prime_suplementos" class="botao botao-insta">Ver Instagram</a>
+                <a href="https://wa.me/5584991926432?text=Ol%C3%A1%2C%20eu%20gostaria%20de%20saber%20o%20sabor%20de%20um%20produto.%20Pode%20me%20informar%3F" class="botao botao-insta">Solicitar sabores</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🛒 Catálogo de produtos -->
+    <main id="catalogo">
+
+        <!-- Seção: Creatina -->
+        <section class="categoria" id="creatina">
+            <h2>Creatina</h2>
+            <div class="lista-produtos scroll-horizontal" id="produtos-creatina">
+                <!-- Produtos adicionados dinamicamente ou manualmente -->
+            </div>
+        </section>
+
+        <!-- Seção: Pré-treino -->
+        <section class="categoria" id="pre-treino">
+            <h2>Pré-treinos</h2>
+            <div class="lista-produtos scroll-horizontal" id="produtos-pre-treino">
+            </div>
+        </section>
+
+        <!-- Seção: Whey -->
+        <section class="categoria" id="whey">
+            <h2>Whey Protein</h2>
+            <div class="lista-produtos scroll-horizontal" id="produtos-whey">
+            </div>
+        </section>
+
+        <!-- Seção: Termogênico -->
+        <section class="categoria" id="termogenico">
+            <h2>Termogênicos</h2>
+            <div class="lista-produtos scroll-horizontal" id="produtos-termogenico">
+            </div>
+        </section>
+
+        <!-- Seção: Outros -->
+        <section class="categoria" id="outros">
+            <h2>Outros</h2>
+            <div class="lista-produtos scroll-horizontal" id="produtos-outros">
+            </div>
+        </section>
+    </main>
+
+    <!-- 🧾 Sacola (carrinho) -->
+    <section id="sacola">
+        <h2>Sacola de Compras</h2>
+        <ul id="lista-carrinho"></ul>
+        <p id="total">Total: R$ 0,00</p>
+
+        <form id="formulario">
+            <input type="text" id="nome" placeholder="Seu nome" required>
+
+            <div class="endereco">
+                <input type="text" id="cep" placeholder="CEP | 00000-000" required>
+                <input type="text" id="rua" placeholder="Rua | insira primeiro o cep" readonly>
+                <input type="text" id="numero" placeholder="Número" required>
+                <input type="text" id="complemento" placeholder="Complemento (bloco, apto...)" required>
+
+                <select id="tipo-endereco" required>
+                    <option value="">Tipo de endereço</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Apartamento">Apartamento</option>
+                    <option value="Comércio">Comércio</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="pagamento">
+                <label><input type="radio" name="pagamento" value="Pix" required> Pix</label>
+                <label><input type="radio" name="pagamento" value="Débito"> Débito</label>
+                <label><input type="radio" name="pagamento" value="Crédito"> Crédito</label>
+                <label><input type="radio" name="pagamento" value="Outros (combinar no WhatsApp)"> Outros</label>
+            </div>
+
+            <div class="parcelamento">
+                <label for="parcelas">Parcelamento:</label>
+                <select id="parcelas" required>
+                    <option value="">Selecione...</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="enviarPedido()">Continuar para a entrega</button>
+        </form>
+    </section>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
