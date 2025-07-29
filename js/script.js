@@ -9,8 +9,15 @@ const produtos = [
     { id: "p1", nome: "Pré-treino Insane clown", preco: 129.00, categoria: "pre-treino", img: "/imagens/produtos/pretreinodemonslab.jpg" },
     { id: "p2", nome: "Pré-treino epic 300g", preco: 179.00, categoria: "pre-treino", img: "/imagens/produtos/epic.webp" },
     { id: "p3", nome: "Pré-treino nuclear rush 300g", preco: 179.00, categoria: "pre-treino", img: "/imagens/produtos/pretreinobodyaction.jpg" },
-    { id: "w1", nome: "Whey Protein Growth", preco: 119.9, categoria: "whey", img: "imagens/whey.jpg" },
-    { id: "t1", nome: "testobol", preco: 69.9, categoria: "outros", img: "imagens/transferir.jpg" }
+    { id: "w1", nome: "Whey bodyaction isolado 900g", preco: 149.9, categoria: "whey", img: "/imagens/produtos/wheybodyaction900.jpg" },
+    { id: "w2", nome: "Whey integral medica", preco: 119.9, categoria: "whey", img: "/imagens/produtos/wheyintegral900.jpg" },
+    { id: "w3", nome: "Whey isolado dux", preco: 199.9, categoria: "whey", img: "imagens/produtos/wheydux900.jpg" },
+    { id: "t1", nome: "hot growth", preco: 79.9, categoria: "termogenico", img: "/imagens/produtos/hot.jpg" },
+    { id: "t2", nome: "therma integral", preco: 89.9, categoria: "termogenico", img: "/imagens/produtos/thermogenicointegral.png" },
+    { id: "t3", nome: "Fire black", preco: 64.9, categoria: "termogenico", img: "/imagens/produtos/fireblack.webp" },
+    { id: "o1", nome: "coqteleira", preco: 19.9, categoria: "outros", img: "/imagens/produtos/coqteleira.jpg" },
+    { id: "o2", nome: "strap", preco: 34.9, categoria: "outros", img: "/imagens/produtos/strap.jpg" },
+    { id: "03", nome: "munhequeira", preco: 39.9, categoria: "outros", img: "/imagens/produtos/munhequeira.jpg" }
 ];
 
 // Tabela de juros por parcela
