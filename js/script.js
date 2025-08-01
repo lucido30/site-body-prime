@@ -11,7 +11,7 @@ const produtos = [
     { id: "p3", nome: "Pré-treino nuclear rush 300g", preco: 179.00, categoria: "pre-treino", img: "/imagens/produtos/pretreinobodyaction.jpg" },
     { id: "w1", nome: "Whey bodyaction isolado 900g", preco: 149.9, categoria: "whey", img: "/imagens/produtos/wheybodyaction900.jpg" },
     { id: "w2", nome: "Whey integral medica", preco: 119.9, categoria: "whey", img: "/imagens/produtos/wheyintegral900.jpg" },
-    { id: "w3", nome: "Whey isolado dux", preco: 199.9, categoria: "whey", img: "imagens/produtos/wheydux900.jpg" },
+    { id: "w3", nome: "Whey isolado dux", preco: 199.9, categoria: "whey", img: "/imagens/produtos/wheydux900.jpg" },
     { id: "t1", nome: "hot growth", preco: 79.9, categoria: "termogenico", img: "/imagens/produtos/hot.jpg" },
     { id: "t2", nome: "therma integral", preco: 89.9, categoria: "termogenico", img: "/imagens/produtos/thermogenicointegral.png" },
     { id: "t3", nome: "Fire black", preco: 64.9, categoria: "termogenico", img: "/imagens/produtos/fireblack.webp" },
@@ -208,6 +208,7 @@ function enviarPedido() {
     msg += `🚚 *Em breve você receberá o valor do frete!*\n`;
     msg += `⏳ O prazo de entrega é de até 30 minutos após confirmação do pagamento.\n`;
     msg += `\nAgradecemos pela preferência! 💪`;
+    msg += `\nNão apague essa mensagem, ${nome}`;
 
     const url = `https://wa.me/5584991926432?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
