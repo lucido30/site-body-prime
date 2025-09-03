@@ -206,7 +206,7 @@ function enviarPedido() {
     msg += `────────────────────────────\n`;
 
     msg += `🚚 *Em breve você receberá o valor do frete!*\n`;
-    msg += `⏳ O prazo de entrega é de até 30 minutos após confirmação do pagamento.\n`;
+    msg += `⏳ O prazo de entrega é de até 20 minutos após confirmação do pagamento.\n`;
     msg += `\nAgradecemos pela preferência! 💪`;
     msg += `\nNão apague essa mensagem, ${nome}`;
 
