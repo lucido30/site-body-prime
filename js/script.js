@@ -1,7 +1,7 @@
-// 🛒 Carrinho e produtos
+//Carrinho e produtos
 let carrinho = [];
 
-// Exemplo inicial de produtos
+// Exemplo inicial de produtos | sim, futuramente terá um construtor!
 const produtos = [
     { id: "c1", nome: "Creatina Max Titanium 300g", preco: 89.9, categoria: "creatina", img: "imagens/produtos/creatinamax300.jpg" },
     { id: "c2", nome: "Creatina Integral medica 300g", preco: 99.9, categoria: "creatina", img: "/imagens/produtos/creatinaintegral300.jpg" },
@@ -17,7 +17,7 @@ const produtos = [
     { id: "t3", nome: "Fire black", preco: 64.9, categoria: "termogenico", img: "/imagens/produtos/fireblack.webp" },
     { id: "o1", nome: "coqteleira", preco: 19.9, categoria: "outros", img: "/imagens/produtos/coqteleira.jpg" },
     { id: "o2", nome: "strap", preco: 34.9, categoria: "outros", img: "/imagens/produtos/strap.jpg" },
-    { id: "03", nome: "munhequeira", preco: 39.9, categoria: "outros", img: "/imagens/produtos/munhequeira.jpg" }
+    { id: "o3", nome: "munhequeira", preco: 39.9, categoria: "outros", img: "/imagens/produtos/munhequeira.jpg" }
 ];
 
 // Tabela de juros por parcela
@@ -53,9 +53,9 @@ function adicionarProdutoNaCategoria(produto) {
     <h3>${produto.nome}</h3>
     <p>R$ ${produto.preco.toFixed(2)}</p>
     <div class="botoes-qtd" id="botoes-${produto.id}">
-      <button onclick="adicionarAoCarrinho('${produto.id}')">Adicionar</button>
+        <button onclick="adicionarAoCarrinho('${produto.id}')">Adicionar</button>
     </div>
-  `;
+    `;
 
     secao.appendChild(div);
 }
@@ -92,9 +92,9 @@ function atualizarQuantidadeNoCard(id) {
 
     if (item) {
         botoes.innerHTML = `
-      <button onclick="alterarQtd('${id}', -1)">-</button>
-      <span>${item.qtd}</span>
-      <button onclick="alterarQtd('${id}', 1)">+</button>
+        <button onclick="alterarQtd('${id}', -1)">-</button>
+        <span>${item.qtd}</span>
+        <button onclick="alterarQtd('${id}', 1)">+</button>
     `;
     } else {
         botoes.innerHTML = `<button onclick="adicionarAoCarrinho('${id}')">Adicionar</button>`;
@@ -116,9 +116,9 @@ function atualizarCarrinho() {
         const li = document.createElement("li");
         li.innerHTML = `
       ${item.nome} - R$ ${(item.preco * item.qtd).toFixed(2)}
-      <button onclick="alterarQtd('${item.id}', -1)">-</button>
-      <span>${item.qtd}</span>
-      <button onclick="alterarQtd('${item.id}', 1)">+</button>
+        <button onclick="alterarQtd('${item.id}', -1)">-</button>
+        <span>${item.qtd}</span>
+        <button onclick="alterarQtd('${item.id}', 1)">+</button>
     `;
         lista.appendChild(li);
     });
@@ -141,7 +141,7 @@ function atualizarParcelas(total) {
     }
 }
 
-// 📦 Preenchimento automático via CEP
+//Preenchimento automático via CEP| API
 const cepInput = document.getElementById("cep");
 cepInput.addEventListener("blur", () => {
     const cep = cepInput.value.replace(/\D/g, "");
@@ -159,7 +159,7 @@ cepInput.addEventListener("blur", () => {
         });
 });
 
-// 📲 Enviar para o WhatsApp
+// whatasapp
 function enviarPedido() {
     const nome = document.getElementById("nome").value;
     const rua = document.getElementById("rua").value;
