@@ -1,1 +1,43 @@
+# 🚀 Meu Site de Estudos  
+
+Este é um **site simples**, desenvolvido com o objetivo de **aprimorar meus estudos em programação**.  
+O projeto está em **constante atualização**, servindo como laboratório para novas ideias e práticas.  
+
+Além de estudos, este site também será futuramente utilizado como a **loja oficial do criador**.  
+
+---
+
+## 🔧 Tecnologias Utilizadas
+- ⚡ HTML  
+- 🎨 CSS  
+- 🖥️ JavaScript  
+*(em constante evolução — novas ferramentas podem ser adicionadas)*  
+
+---
+
+## 📌 Objetivos do Projeto
+- 📚 Servir como base prática para estudos  
+- 💡 Explorar boas práticas de desenvolvimento web  
+- 🔄 Evoluir continuamente com novas funcionalidades  
+- 🛍️ Adaptar-se para futura utilização comercial  
+
+---
+
+## 📅 Status
+- ✅ **Em desenvolvimento**  
+- 🔄 **Atualizações frequentes**  
+
+---
+
+## 🚀 Como Executar Localmente
+Se quiser rodar o projeto na sua máquina:  
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/site-body-prime.git
+
+# Acesse a pasta do projeto
+cd site-body-prime
+
+# Abra o arquivo index.html no navegador
 
