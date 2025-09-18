@@ -19,7 +19,7 @@
                 <a href="#pre-treino">Pré-treino</a>
                 <a href="#whey">Whey</a>
                 <a href="#termogenico">Termogênico</a>
-
+                <a href="#outros">Acessórios</a>
             </nav>
         </div>
     </header>
@@ -36,57 +36,62 @@
         </div>
     </section>
 
-    <!--Catálogo de produtos | em breve construtor -->
     <main id="catalogo">
+        <section class="barra-busca" aria-labelledby="titulo-busca">
+            <div class="conteudo-busca">
+                <h2 id="titulo-busca">Encontre o suplemento ideal</h2>
+                <p class="dica-busca">Digite o nome do produto ou categoria para filtrar o catálogo.</p>
+                <div class="controle-busca">
+                    <input type="search" id="busca-produtos" placeholder="Buscar por exemplo: whey, creatina, strap..." aria-label="Buscar produtos">
+                    <button type="button" id="limpar-busca" class="botao-limpar-busca">Limpar</button>
+                </div>
+            </div>
+        </section>
 
-        <!-- Seção: Creatina -->
+        <p id="mensagem-sem-resultados" class="mensagem-sem-resultados" hidden>Nenhum produto corresponde à busca no momento.</p>
+
         <section class="categoria" id="creatina">
             <h2>Creatina</h2>
-            <div class="lista-produtos scroll-horizontal" id="produtos-creatina">
-            </div>
+            <div class="lista-produtos scroll-horizontal" id="produtos-creatina"></div>
         </section>
 
-        <!-- Seção: Pré-treino -->
         <section class="categoria" id="pre-treino">
             <h2>Pré-treinos</h2>
-            <div class="lista-produtos scroll-horizontal" id="produtos-pre-treino">
-            </div>
+            <div class="lista-produtos scroll-horizontal" id="produtos-pre-treino"></div>
         </section>
 
-        <!-- Seção: Whey -->
         <section class="categoria" id="whey">
             <h2>Whey Protein</h2>
-            <div class="lista-produtos scroll-horizontal" id="produtos-whey">
-            </div>
+            <div class="lista-produtos scroll-horizontal" id="produtos-whey"></div>
         </section>
 
-        <!-- Seção: Termogênico -->
         <section class="categoria" id="termogenico">
             <h2>Termogênicos</h2>
-            <div class="lista-produtos scroll-horizontal" id="produtos-termogenico">
-            </div>
+            <div class="lista-produtos scroll-horizontal" id="produtos-termogenico"></div>
         </section>
 
-        <!-- Seção: Outros -->
         <section class="categoria" id="outros">
             <h2>Outros</h2>
-            <div class="lista-produtos scroll-horizontal" id="produtos-outros">
-            </div>
+            <div class="lista-produtos scroll-horizontal" id="produtos-outros"></div>
         </section>
     </main>
 
-    <!--Sacola-->
     <section id="sacola">
         <h2>Sacola de Compras</h2>
-        <ul id="lista-carrinho"></ul>
+        <p id="carrinho-vazio" class="carrinho-vazio">Sua sacola está vazia. Adicione itens para começar!</p>
+        <ul id="lista-carrinho" aria-live="polite"></ul>
         <p id="total">Total: R$ 0,00</p>
+
+        <div class="acoes-carrinho">
+            <button type="button" id="limpar-carrinho" class="botao-secundario">Limpar sacola</button>
+        </div>
 
         <form id="formulario">
             <input type="text" id="nome" placeholder="Seu nome" required>
 
             <div class="endereco">
                 <input type="text" id="cep" placeholder="CEP | 00000-000" required>
-                <input type="text" id="rua" placeholder="Rua | insira primeiro o cep" readonly>
+                <input type="text" id="rua" placeholder="Rua | insira primeiro o CEP" readonly>
                 <input type="text" id="numero" placeholder="Número" required>
                 <input type="text" id="complemento" placeholder="Complemento (bloco, apto...)" required>
 
@@ -99,25 +104,30 @@
                 </select>
             </div>
 
-            <div class="pagamento">
+            <fieldset class="pagamento" aria-label="Forma de pagamento">
+                <legend>Forma de pagamento</legend>
                 <label><input type="radio" name="pagamento" value="Pix" required> Pix</label>
                 <label><input type="radio" name="pagamento" value="Débito"> Débito</label>
                 <label><input type="radio" name="pagamento" value="Crédito"> Crédito</label>
                 <label><input type="radio" name="pagamento" value="Outros (combinar no WhatsApp)"> Outros</label>
-            </div>
+            </fieldset>
 
             <div class="parcelamento">
                 <label for="parcelas">Parcelamento:</label>
-                <select id="parcelas" required>
+                <select id="parcelas" disabled>
                     <option value="">Selecione...</option>
                 </select>
+                <p class="ajuda-pagamento">Parcelamento disponível apenas para pagamentos no crédito.</p>
             </div>
 
-            <button type="button" onclick="enviarPedido()">Continuar para a entrega</button>
+            <button type="button" id="finalizar-pedido">Continuar para a entrega</button>
         </form>
     </section>
 
-
+    <button type="button" id="botao-carrinho-flutuante" class="botao-carrinho-flutuante" aria-label="Ir para a sacola" hidden>
+        🛒 Sacola
+        <span class="detalhes"></span>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
